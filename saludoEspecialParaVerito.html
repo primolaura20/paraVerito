@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saludo Especial</title>
+
+<style>
+
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#ff758c,#ffb199);
+}
+
+/* tarjeta principal */
+.card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* botón */
+button{
+    padding:14px 28px;
+    border:none;
+    border-radius:30px;
+    background:#ff4d6d;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+/* fondo del popup */
+.popup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    display:none;
+    justify-content:center;
+    align-items:center;
+}
+
+/* ventana del mensaje */
+.popup-contenido{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    width:90%;
+    max-width:500px;
+    max-height:70vh;
+    overflow-y:auto; /* scroll si el mensaje es largo */
+    animation:aparecer 0.5s ease;
+}
+
+/* botón cerrar */
+.cerrar{
+    float:right;
+    cursor:pointer;
+    font-size:20px;
+}
+
+/* animación */
+@keyframes aparecer{
+    from{
+        transform:translateY(50px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+ <h1>✨ ¡Hola Verito! ✨</h1>
+ <p> <b>Ya sonreiste..? 🙃</b> </p> 
+ <p>Espero que si, sino puedes hacerlo ahora... muy bien lo hiciste...😄</p>
+ <p> <b>Te ganaste un chocolate...🍫😋</b> </p> 
+ <p>Tengo un saludo especial para ti</p>
+<button onclick="abrir()">Abrir saludo 🎁</button>
+</div>
+
+<!-- POPUP -->
+<div id="popup" class="popup">
+
+<div class="popup-contenido">
+
+<span class="cerrar" onclick="cerrar()">✖</span>
+
+<h2>🎉 ¡Feliz Dia de la Mujer...! 🎉</h2>
+
+
+<p>
+📜 Hoy es un día especial para todas las mujeres. 
+Según la historia, se recuerda un día de lucha, esfuerzo y valentía de 
+muchas mujeres que alzaron la voz por un mundo más justo.</p>
+
+    <p> Y hoy, tú también eres parte de esa lucha. ¿Sabes por qué?</p>
+        
+
+        Porque te esfuerzas cada día, porque eres valiente y no te dejas vencer por los obstáculos que aparecen en tu camino. Porque sigues adelante con fuerza, dedicación y una gran pasión por lo que haces.
+        
+        Eres un ejemplo de mujer: un ejemplo en tu trabajo, un ejemplo para las niñas que te ven, para tus sobrinas, para otras mujeres y para todas las personas que tienen la suerte de conocerte.
+        
+        Por todo eso y mucho más, hoy quiero desearte un feliz Día de la Mujer. Que nunca dejes de brillar, de luchar por tus sueños y de demostrar la gran mujer que eres. 🌷🎉
+          
+       
+</p>
+<p>
+        🎉 ¡Te deseo un día increíble lleno de alegría, sonrias y muchas cosas bonias...! ✨.
+
+        </p>
+<p>
+💌 Gracias por tomarte el tiempo de abrir este saludo especial.
+</p>
+
+</div>
+</div>
+
+<script>
+
+function abrir(){
+document.getElementById("popup").style.display="flex";
+}
+
+function cerrar(){
+document.getElementById("popup").style.display="none";
+}
+
+</script>
+
+</body>
+</html>
